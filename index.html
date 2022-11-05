@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        
+        <link
+            rel="shortcut icon"
+            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH8SURBVEiJtZRNaBNBFMd/bxJbo5YGND00FYKwINIq6EnqR7XqwasQ8YuCPeTUg/cevejVUw/14hfGu1AV6wdYECoEBU/WFmJBJZgoJlqzMx7cprvp7maj8Z1m5r3//zdveIwYYwiLbDbbVe7qnQA5gjF7ARB5BWY2uVK5ls/nV8L0EgY4fj43JNrcQMwe3wIjBaPkwsObU6/bBpzMXkzVN8TeAH1hNwQ+xX/Zg/fz1z/7JVWQqh6PTbnMKwI5tE6jdVogB1ScXJ9TG72DE2fG+1Hqg7O1tdEHH92ennPXHDs7vl+Jeg7EANA6/eDO9HKkDkRkn2s702wO4JzNBGjCASgGG2sjBd+a5pxb0xJgpHvtZiZwDD05l6Y1oIPx3wHrp+hZ97lyLXE5mfiRaceoXNu4mEzUJjn081Yw4MmmAZReZHX02g8brTKMVIurB94nUvr0P5gDxByPRsS9eekB/6/j6bsM9wq7MMCpobcctd4HMKQnBOAfpe8Jrjwepq7/NHx1dpjd/R/ZtrnaUhtpil4sbW+YA2gjzC0NRJFGA+xMlSKd/TXASpW4dHjtO5o48BKrkwCAHVu/+K47BiiWexvr5a9bOg/wiCR6bdOYmm9BhaPWAqPWQgRLr4e3A63uAnbk660P2/EIAIxUi2DGQObb95Z5MGPufwjgN9FrrjkVQSBVAAAAAElFTkSuQmCC"
+            type="image/x-icon"
+        />
+        <title>Password Generator</title>
+      <script type="module" crossorigin src="/Password-generator/assets/index.17783cd0.js"></script>
+      <link rel="stylesheet" href="/Password-generator/assets/index.0c917f9b.css">
+    </head>
+    <body>
+        <main class="generator__container">
+            <img
+                id="password__padlock"
+                src="/Password-generator/assets/padlock.9817190d.png"
+                alt="padlock"
+                width="150px"
+            />
+            <h1 id="generator__title">Password Generator</h1>
+            <form class="password__form">
+                <input type="checkbox" name="uppercase" class="options" />
+                <label for="uppercase">Uppercase</label>
+
+                <input type="checkbox" name="lowercase" class="options" />
+                <label for="lowercase">Lowercase</label>
+
+                <input type="checkbox" name="character" class="options" />
+                <label for="character">Characters</label>
+
+                <input type="checkbox" name="number" class="options" checked />
+                <label for="number">Number</label>
+            </form>
+
+            <form class="password__formatter">
+                <input id="password__range" type="number" min="1" max="30" />
+                <input id="password__text" type="text" />
+                <i
+                    id="copy__password"
+                    class="fa-regular fa-copy"
+                    title="Copy"
+                ></i>
+            </form>
+
+            <div id="copied__password">
+                <span>Password Copied</span>
+            </div>
+        </main>
+    </body>
+</html>

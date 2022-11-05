@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&display=swap');
+//'IBM Plex Mono', monospace
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: hsl(195, 53%, 79%);
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;
+    background: linear-gradient(
+        to bottom,
+        hsla(276, 100%, 17%, 0.884) 40%,
+        hsl(251, 96%, 54%) 100%
+    );
+    height: 100vh;
+    overflow: hidden;
+}
+
+.generator__container {
+    margin-top: 2%;
+    .password__form,
+    .password__formatter,
+    #generator__btn {
+        margin-top: 20px;
+    }
+
+    .password__form > input,
+    .password__formatter > i,
+    #generator__btn {
+        cursor: pointer;
+    }
+
+    .password__formatter > input {
+        padding: 5px;
+        appearance: none;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .password__formatter > i {
+        font-size: 1.1em;
+    }
+
+    .password__formatter > i:hover {
+        color: hsl(120, 100%, 50%);
+        transition: all 0.3s;
+    }
+
+    #copied__password {
+        margin-top: 20px;
+
+        span {
+            background-color: hsl(128, 100%, 50%);
+            padding: 2px;
+            border-radius: 5px;
+            color: hsl(0, 0%, 4%);
+            font-size: 1.1em;
+            opacity: 0;
+        }
+    }
+
+    #password__padlock {
+        animation: padlock-animate 10s infinite ease;
+        transition: animation 0.3s;
+    }
+}
+
+@keyframes padlock-animate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(30deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(-30deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
